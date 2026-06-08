@@ -4,9 +4,9 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 DOCS_DIR = "documents"
 
-# 250 tokens * 4 chars/token = 1000 chars; 40 tokens * 4 chars/token = 160 chars
-CHUNK_SIZE = 1000
-CHUNK_OVERLAP = 160
+# 350 tokens * 4 chars/token = 1400 chars; 50 tokens * 4 chars/token = 200 chars
+CHUNK_SIZE = 1400
+CHUNK_OVERLAP = 200
 
 
 def load_documents(docs_dir):

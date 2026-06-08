@@ -42,9 +42,9 @@ I chose the domain of student experiences with on-campus housing at my universit
 
 **Chunk size:** 250 tokens 
 
-**Overlap:** 40 tokens
+**Overlap:** 50 tokens
 
-**Reasoning:** I chose 250 tokens for the chunk size because Reddit comments are commonly only 100 or 200 tokens and are very compact, but YouTube transcripts are very long and sparse, so larger chunks are better for those. A reasonable midpoint of 250 tokens per chunk should work well. For the overlap, I chose 40 tokens since an overlap that is too big would result in lots of repeated information between the different chunks, especially with the Reddit comments.
+**Reasoning:** I chose 350 tokens for the chunk size because Reddit comments are commonly only 100 or 200 tokens and are very compact, but YouTube transcripts are very long and sparse, so larger chunks are better for those. A reasonable midpoint of 350 tokens per chunk should work well. For the overlap, I chose 40 tokens since an overlap that is too big would result in lots of repeated information between the different chunks, especially with the Reddit comments.
 
 ---
 
@@ -73,7 +73,7 @@ I chose the domain of student experiences with on-campus housing at my universit
 
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | Is the meal plan worth it? | "The meal plan is generally considered overpriced at approximately $10 per meal with limited quality. Students report low satisfaction with food variety and nutrition, typically consuming only a portion of their plates. The consensus among residents is to select the minimum meal plan tier and supplement with personal food purchases." |
+| 1 | Are Canyon Creek Heights apartments furnished? | "Yes, Canyon Creek Heights apartments are fully furnished. Residents only need to bring their clothes, as all furniture is provided. In addition, all utilities including electricity, Wi-Fi, water, and laundry are included in the rent." |
 | 2 | Are the UTD dorms single occupancy or shared rooms? | "UTD freshman dorms feature individual private bedrooms with shared bathroom facilities and common living areas. Each suite consists of three private bedrooms, with residents sharing one toilet, one shower, and multiple individual sinks." |
 | 3 | Do the Canyon Creek Heights apartments include utilities in rent? | "Yes, Canyon Creek Heights apartments include comprehensive utilities coverage in the rent, including electricity, water, Wi-Fi, internet access, and laundry facilities. Residents do not incur additional utility costs beyond the base rent." |
 | 4 | Is Canyon Creek Heights safe? | "Canyon Creek Heights maintains robust security measures including Comet Card (student ID) access control and regular campus police patrols conducted approximately every thirty minutes throughout the residential area." |

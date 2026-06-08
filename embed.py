@@ -21,7 +21,10 @@ def build_vector_store():
     except Exception:
         pass
 
-    collection = client.create_collection(COLLECTION_NAME)
+    collection = client.create_collection(
+        COLLECTION_NAME,
+        metadata={"hnsw:space": "cosine"},
+    )
 
     texts = [c["text"] for c in chunks]
     embeddings = model.encode(texts, show_progress_bar=True).tolist()
@@ -72,9 +75,9 @@ if __name__ == "__main__":
     build_vector_store()
 
     test_queries = [
-        "What do students think about their living experience in the University Village (UV) apartments?",
-        "What do students think about their living experience in the freshman dorms?",
-        "What do students think about their living experience in the Canyon Creek Heights (CCH) apartments?",
+        "Are Canyon Creek Heights apartments furnished?",
+        "Are the UTD dorms single occupancy or shared rooms?",
+        "Do the Canyon Creek Heights apartments include utilities in rent?",
     ]
 
     for query in test_queries:
