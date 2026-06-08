@@ -78,6 +78,8 @@ if __name__ == "__main__":
         "Are Canyon Creek Heights apartments furnished?",
         "Are the UTD dorms single occupancy or shared rooms?",
         "Do the Canyon Creek Heights apartments include utilities in rent?",
+        "Is Canyon Creek Heights safe?",
+        "Are there any problems with maintenance or insects?",
     ]
 
     for query in test_queries:

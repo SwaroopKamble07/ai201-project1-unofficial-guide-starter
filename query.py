@@ -28,6 +28,8 @@ exactly this sentence and nothing else: "{refusal}"
 3. Never invent details, numbers, names, or facts that are not stated in the CONTEXT.
 4. Do not mention or cite source files yourself — the system adds source attribution \
 automatically after your answer.
+5. Never use the word "CONTEXT" in your response. Answer naturally and directly, \
+as if the information is simply what you know.
 
 Every part of your answer must be traceable to the CONTEXT.""".format(refusal=REFUSAL)
 

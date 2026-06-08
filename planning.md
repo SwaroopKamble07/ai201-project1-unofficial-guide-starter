@@ -40,7 +40,7 @@ I chose the domain of student experiences with on-campus housing at my universit
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:** 250 tokens 
+**Chunk size:** 350 tokens 
 
 **Overlap:** 50 tokens
 

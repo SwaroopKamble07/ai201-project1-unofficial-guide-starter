@@ -13,7 +13,7 @@
      Why is this knowledge valuable, and why is it hard to find through official channels?
      Example: "Student reviews of CS professors at [university] — useful because official
      course descriptions don't reflect teaching style, exam difficulty, or workload." -->
-
+I chose the domain of student experiences with on-campus housing at my university, the University of Texas at Dallas. This knowledge is valuable because it is crucial to help student decide whether to choose to live on or off campus, and what they can expect to experience if they live on campus. This can't really be found through official channels because the university only publishes basic information about what's included with on-campus housing, but not any student reviews or any of the downsides that may come from living on campus. 
 ---
 
 ## Document Sources
@@ -24,16 +24,16 @@
 
 | # | Source | Type | URL or file path |
 |---|--------|------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 | Best Student Housing University Of Texas At Dallas | YouTube | https://www.youtube.com/watch?v=ZoanKQ0wrCA |
+| 2 | University Village Apartments - Richardson, TX | UT Dallas On Campus Student Housing | YouTube | https://www.youtube.com/watch?v=fRG2uwTNZ8U |
+| 3 | Canyon Creek Heights Apartments - Richardson, TX | UT Dallas On Campus Student Housing | YouTube | https://www.youtube.com/watch?v=GvXyADz0sYY |
+| 4 | How is housing this bad??? | Reddit | https://www.reddit.com/r/utdallas/comments/1b1q20n/how_is_housing_this_bad/ |
+| 5 | UTD housing (incoming freshmen) | Reddit | https://www.reddit.com/r/utdallas/comments/1tq5ghl/utd_housing_incoming_freshmen/ |
+| 6 | Need advice on dorms | Reddit | https://www.reddit.com/r/utdallas/comments/1j63bv1/need_advice_on_dorms/ |
+| 7 | What are dorms/housing like on campus? What do I need to bring? | Reddit | https://www.reddit.com/r/utdallas/comments/lc26tv/what_are_dormshousing_like_on_campus_what_do_i/ |
+| 8 | Which dorm/housing should I choose? | Reddit | https://www.reddit.com/r/utdallas/comments/sz7f3z/which_dormhousing_should_i_choose/ |
+| 9 | Best housing option for sophomore year? | Reddit | https://www.reddit.com/r/utdallas/comments/d894jm/best_housing_option_for_sophomore_year/ |
+| 10 | Housing Questions | Reddit | https://www.reddit.com/r/utdallas/comments/5v79qe/housing_questions/ |
 
 ---
 
@@ -46,13 +46,13 @@
      - Any preprocessing you did before chunking (e.g., stripping HTML, removing headers)
      - What your final chunk count was across all documents -->
 
-**Chunk size:**
+**Chunk size:** 350 tokens
 
-**Overlap:**
+**Overlap:** 50 tokens
 
-**Why these choices fit your documents:**
+**Why these choices fit your documents:** I chose 350 tokens for the chunk size because Reddit comments are commonly only 100 or 200 tokens and are very compact, but YouTube transcripts are very long and sparse, so larger chunks are better for those. A reasonable midpoint of 350 tokens per chunk should work well. For the overlap, I chose 40 tokens since an overlap that is too big would result in lots of repeated information between the different chunks, especially with the Reddit comments.
 
-**Final chunk count:**
+**Final chunk count:** 47
 
 ---
 
@@ -64,9 +64,9 @@
      Consider: context length limits, multilingual support, accuracy on domain-specific text,
      latency, and local vs. API-hosted. -->
 
-**Model used:**
+**Model used:** all-MiniLM-L6-v2
 
-**Production tradeoff reflection:**
+**Production tradeoff reflection:** If I was deploying this for real users without any cost constraints, I would go for a significantly larger model that may be much slower, but also much more accurate. Since cost corresponds to the amount of processing power used and cost is not a constraint, the amount of processing power would not be a constraint, and thus, the embedding model would not be too slow to run for the users. Therefore, having a model such as OpenAI's text-embedding-3-large would offer a good tradeoff since it has a large context length, good multilingual support, and high accuracy on domain-specific text, all without having too much latency.
 
 ---
 
@@ -79,9 +79,21 @@
      Do not just say "I told it to use the documents" — show the actual instruction or explain
      the mechanism. -->
 
-**System prompt grounding instruction:**
+**System prompt grounding instruction:** You are The Unofficial Guide, a question-answering assistant about \
+student experiences with on-campus housing at the University of Texas at Dallas (UTD).
 
-**How source attribution is surfaced in the response:**
+Follow these rules without exception:
+1. Answer ONLY using the information in the CONTEXT provided in the user message. \
+Do not use any outside knowledge or anything from your training data.
+2. If the CONTEXT does not contain enough information to answer the question, reply with \
+exactly this sentence and nothing else: "{refusal}"
+3. Never invent details, numbers, names, or facts that are not stated in the CONTEXT.
+4. Do not mention or cite source files yourself — the system adds source attribution \
+automatically after your answer.
+
+Every part of your answer must be traceable to the CONTEXT.
+
+**How source attribution is surfaced in the response:** 
 
 ---
 

@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
     chunks = chunk_text(docs)
     print(f"Total chunks: {len(chunks)}")
-    print(f"(Expected range: 50–2000 chunks across 10 documents)\n")
+    print(f"(Expected range: 40–2000 chunks across 10 documents)\n")
 
     print("--- 5 Random Chunks ---\n")
     for i, chunk in enumerate(random.sample(chunks, min(5, len(chunks))), 1):
