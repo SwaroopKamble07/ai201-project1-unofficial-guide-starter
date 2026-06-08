@@ -18,9 +18,9 @@ def handle_query(question):
 EXAMPLES = [
     "Are Canyon Creek Heights apartments furnished?",
     "Are the UTD dorms single occupancy or shared rooms?",
-    "Is the meal plan worth it?",
+    "Do the Canyon Creek Heights apartments include utilities in rent?",
     "Is Canyon Creek Heights safe?",
-    "What's the difference between University Village and the dorms?",
+    "Are there any problems with maintenance or insects?",
 ]
 
 with gr.Blocks(title="The Unofficial Guide — UTD Housing") as demo:

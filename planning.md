@@ -40,11 +40,11 @@ I chose the domain of student experiences with on-campus housing at my universit
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:** 350 tokens 
+**Chunk size:** 250 tokens 
 
-**Overlap:** 50 tokens
+**Overlap:** 40 tokens
 
-**Reasoning:** I chose 350 tokens for the chunk size because Reddit comments are commonly only 100 or 200 tokens and are very compact, but YouTube transcripts are very long and sparse, so larger chunks are better for those. A reasonable midpoint of 350 tokens per chunk should work well. For the overlap, I chose 40 tokens since an overlap that is too big would result in lots of repeated information between the different chunks, especially with the Reddit comments.
+**Reasoning:** I chose 250 tokens for the chunk size because Reddit comments are commonly only 100 or 200 tokens and are very compact, but YouTube transcripts are very long and sparse, so larger chunks are better for those. A reasonable midpoint of 250 tokens per chunk should work well. For the overlap, I chose 40 tokens since an overlap that is too big would result in lots of repeated information between the different chunks, especially with the Reddit comments.
 
 ---
 
@@ -77,7 +77,7 @@ I chose the domain of student experiences with on-campus housing at my universit
 | 2 | Are the UTD dorms single occupancy or shared rooms? | "UTD freshman dorms feature individual private bedrooms with shared bathroom facilities and common living areas. Each suite consists of three private bedrooms, with residents sharing one toilet, one shower, and multiple individual sinks." |
 | 3 | Do the Canyon Creek Heights apartments include utilities in rent? | "Yes, Canyon Creek Heights apartments include comprehensive utilities coverage in the rent, including electricity, water, Wi-Fi, internet access, and laundry facilities. Residents do not incur additional utility costs beyond the base rent." |
 | 4 | Is Canyon Creek Heights safe? | "Canyon Creek Heights maintains robust security measures including Comet Card (student ID) access control and regular campus police patrols conducted approximately every thirty minutes throughout the residential area." |
-| 5 | Are there any problems with maintenance or insects? | "Based on available sources, specific maintenance or pest-related issues are not extensively documented. While some references indicate that older apartments in University Village may experience general facility concerns, primary student complaints focus on structural issues such as thin walls and inadequate insulation rather than documented maintenance failures or pest infestations." |
+| 5 | Are there any problems with maintenance or insects? | "Yes, there are some problems with maintenance, particularly in the UV apartments, with several people reporting problems with sink drainage, hot water, mild ant problems, and flooding washers. At CCHN, there was also a mold problem." |
 
 ---
 
